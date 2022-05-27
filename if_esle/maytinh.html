@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="maytinh.css">
+    <table border="2">
+        <tr>
+            <td colspan="4" >
+                <p id = "result"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calBasic('1')">1</button>
+                <button onclick="calBasic('2')">2</button>
+                <button onclick="calBasic('3')">3</button>
+                <button onclick="calBasic('+')">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calBasic('4')">4</button>
+                <button onclick="calBasic('5')">5</button>
+                <button onclick="calBasic('6')">6</button>
+                <button onclick="calBasic('-')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calBasic('7')">7</button>
+                <button onclick="calBasic('8')">8</button>
+                <button onclick="calBasic('9')">9</button>
+                <button onclick="calBasic('*')">*</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calBasic('C')">C</button>
+                <button onclick="calBasic('0')">0</button>
+                <button onclick="calBasic('=')">=</button>
+                <button onclick="calBasic('/')">/</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function calBasic(num) {
+            let value = document.getElementById("result").innerText;
+            document.getElementById("result").innerText = num;
+            switch (num) {
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                    value = value + num;
+                    break;
+                case "=":
+                    value = eval(value)
+            }
+            document.getElementById("result").innerText = value;
+        }
+    </script>
+</body>
+</html>
